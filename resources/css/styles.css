@@ -150,18 +150,17 @@ nav li {
 	margin-left: calc(50% - 25px);
 	margin-right: calc(50% - 25px);
 	position: absolute;
-	top: 900px;
 }
 
 @keyframes arrow_hover {
 	0% {
-		top: 85%;
+		top: 87%;
 	}
 	50% {
-		top: 90%;
+		top: 92%;
 	}
 	100% {
-		top: 85%;
+		top: 87%;
 	}
 }
 

@@ -112,6 +112,12 @@ nav li {
 	height: 50px;
 }
 
+#links ul {
+	align-items: center;
+	display: flex;
+	height: 50px;
+}
+
 #logo {
 	align-items: center;
 	display: flex;
@@ -149,19 +155,19 @@ nav li {
 
 @keyframes arrow_hover {
 	0% {
-		top: 850px;
+		top: 85%;
 	}
 	50% {
-		top: 900px;
+		top: 90%;
 	}
 	100% {
-		top: 850px;
+		top: 85%;
 	}
 }
 
 @media all and (max-width: 768px) {
 	nav {
-		height: 100px;
+		height: 125px;
 	}
 
 	nav li {
@@ -173,13 +179,25 @@ nav li {
 		font-size: 1.5rem;
 	}
 
+	#banner {
+		top: 125px;
+		height: calc(100vh - 125px);
+	}
+
+	#icons {
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	#landing {
 		flex-direction: column;
+		height: calc(100vh - 125px);
 		justify-content: space-evenly;
+		top: 125px;
 	}
 
 	#landing #headshot {
-		width: 60%;
+		width: 40%;
 	}
 
 	#landing #text {
@@ -188,5 +206,9 @@ nav li {
 
 	#landing #text h1 {
 		font-size: 5rem;
+	}
+
+	#links ul {
+		flex-direction: column;
 	}
 }

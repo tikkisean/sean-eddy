@@ -10,6 +10,7 @@
 
 html {
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 nav {
@@ -103,12 +104,13 @@ footer {
 #about a {
 	align-items: center;
 	background-size: cover;
+	background-position: center;
 	border: 5px solid white;
 	display: flex;
 	height: 30%;
 	justify-content: center;
 	transition: box-shadow 0.25s;
-	width: 30%
+	width: 30%;
 }
 
 #about a:hover {
@@ -123,11 +125,11 @@ footer {
 }
 
 #about #academics {
-	background-image: url("/resources/images/old_main_blur.png")
+	background-image: url("/resources/images/old_main_blur.png");
 }
 
 #about #my_work {
-	background-image: url("/resources/images/skyline_blur.png")
+	background-image: url("/resources/images/skyline_blur.png");
 }
 
 #about p {
@@ -290,10 +292,11 @@ footer {
 	#icons i:hover {
 		color: red;
 	}
-	
+
 	#logo h3:hover {
 		text-shadow: 0 0 0.2rem white;
 	}
+}
 
 @media all and (min-width: 1100px) {
 	#landing #headshot:hover {
@@ -336,7 +339,7 @@ footer {
 	}
 }
 
-@media (max-width: 768px) or (hover: none) or (pointer: coarse) or (pointer: none) {
+@media all and (max-width: 768px) {
 	nav {
 		height: 125px;
 	}

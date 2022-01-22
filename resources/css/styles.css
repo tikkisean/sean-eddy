@@ -306,7 +306,7 @@ footer {
 	}
 }
 
-@media all and (min-width: 768px) and (max-width: 1099px) {
+@media all and (min-width: 769px) and (max-width: 1099px) {
 	nav li {
 		margin-left: 2.5rem;
 		margin-right: 2.5rem;
@@ -337,7 +337,7 @@ footer {
 	}
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 	nav {
 		height: 125px;
 	}

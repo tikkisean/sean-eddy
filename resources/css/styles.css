@@ -295,7 +295,7 @@ footer {
 	#logo h3:hover {
 		text-shadow: 0 0 0.2rem white;
 	}
-
+/*
 @media all and (min-width: 1100px) {
 	#landing #headshot:hover {
 		width: 30%;
@@ -336,8 +336,8 @@ footer {
 		font-size: 5rem;
 	}
 }
-
-@media (max-width: 768px) or (hover: none) or (pointer: coarse) or (pointer: none) {
+*/
+@media (max-width: 10000px) {
 	nav {
 		height: 125px;
 	}

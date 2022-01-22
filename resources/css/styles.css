@@ -3,12 +3,14 @@
 	color: white;
 	font-family: "Montserrat", sans-serif;
 	margin: 0;
+
 	padding: 0;
 	text-decoration: none;
 }
 
 html {
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 nav {
@@ -28,25 +30,113 @@ nav ul a {
 	transition: color 0.25s;
 }
 
-nav ul a:hover {
-	color: red;
-}
-
 nav li {
 	display: inline;
 	margin-left: 5rem;
 	margin-right: 5rem;
 }
 
-#banner {
-	border-bottom: 10px solid black;
-	filter: blur(2px);
-	height: calc(100vh - 50px);
-	object-fit: cover;
-	overflow: hidden;
-	position: relative;
-	top: 50px;
+footer {
+	align-items: center;
+	background-color: black;
+	border-top: 5px solid red;
+	display: flex;
+	height: 100px;
+	justify-content: space-around;
+	position: absolute;
+	top: 210vh;
 	width: 100%;
+}
+
+#about {
+	align-items: center;
+	align-content: space-around;
+	background-image: url("/resources/images/stars.jpg");
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	justify-content: space-around;
+	position: absolute;
+	top: 110vh;
+	width: 100%;
+}
+
+#about #collage {
+	align-content: center;
+	background-color: black;
+	border: 5px solid white;
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	display: flex;
+	flex-wrap: flex;
+	height: 50%;
+	transition: all 0.25s;
+	width: 40%;
+}
+
+#about #collage img {
+	display: block;
+	height: 50%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#about #learn_more {
+	align-items: center;
+	background-color: red;
+	box-shadow: 0.75rem 0.75rem rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	width: 25%;
+}
+
+#about #learn_more h2 {
+	font-size: 2rem;
+}
+
+#about #learn_more i {
+	animation-iteration-count: infinite;
+	animation-name: arrow_right;
+	animation-duration: 2s;
+}
+
+#about a {
+	align-items: center;
+	background-size: cover;
+	border: 5px solid white;
+	display: flex;
+	height: 30%;
+	justify-content: center;
+	transition: box-shadow 0.25s;
+	width: 30%
+}
+
+#about a:hover {
+	box-shadow: 0 0 1rem white;
+}
+
+#about h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 0.25rem 0.25rem black;
+}
+
+#about #academics {
+	background-image: url("/resources/images/old_main_blur.png")
+}
+
+#about #my_work {
+	background-image: url("/resources/images/skyline_blur.png")
+}
+
+#about p {
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	font-size: 2rem;
+	padding: 1rem;
+	width: 40%;
 }
 
 #icons {
@@ -61,12 +151,10 @@ nav li {
 	transition: color 0.25s;
 }
 
-#icons i:hover {
-	color: red;
-}
-
 #landing {
 	align-items: center;
+	background-image: url("/resources/images/banner.jpg");
+	background-size: cover;
 	display: flex;
 	height: calc(100vh - 50px);
 	justify-content: space-around;
@@ -83,10 +171,6 @@ nav li {
 	z-index: 10;
 }
 
-#landing #headshot:hover {
-	width: 30%;
-}
-
 #landing #text {
 	background-color: rgba(255, 0, 0, 0.5);
 	padding: 3rem;
@@ -94,7 +178,6 @@ nav li {
 }
 
 #landing #text h1 {
-	font-size: 8rem;
 	font-style: italic;
 	font-weight: 700;
 	text-shadow: 0.75rem 0.75rem black;
@@ -131,19 +214,38 @@ nav li {
 	transition: text-shadow 0.25s;
 }
 
-#logo h3:hover {
-	text-shadow: 0 0 0.2rem white;
-}
-
 #logo img {
 	height: 50px;
 	width: 50px;
 	z-index: 100;
 }
 
+#separator {
+	align-items: center;
+	background-color: black;
+	display: flex;
+	height: 10vh;
+	justify-content: center;
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+}
+
+#separator h2 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	text-align: center;
+}
+
+#separator hr {
+	background-color: white;
+	height: 0.1rem;
+	width: 35%;
+}
+
 .fa-angle-down {
 	animation-iteration-count: infinite;
-	animation-name: arrow_hover;
+	animation-name: arrow_down;
 	animation-duration: 2s;
 	color: white;
 	display: block;
@@ -152,19 +254,90 @@ nav li {
 	position: absolute;
 }
 
-@keyframes arrow_hover {
+@keyframes arrow_down {
 	0% {
-		top: 87%;
+		top: 85%;
 	}
 	50% {
-		top: 92%;
+		top: 90%;
 	}
 	100% {
-		top: 87%;
+		top: 85%;
 	}
 }
 
-@media all and (max-width: 768px) {
+@keyframes arrow_right {
+	0% {
+		padding-right: 0;
+	}
+	50% {
+		padding-right: 10%;
+	}
+	100% {
+		padding-right: 0;
+	}
+}
+
+@media (hover: hover) {
+	nav ul a:hover {
+		color: red;
+	}
+
+	#about #collage:hover {
+		height: 55%;
+		width: 45%;
+	}
+
+	#icons i:hover {
+		color: red;
+	}
+	
+	#logo h3:hover {
+		text-shadow: 0 0 0.2rem white;
+	}
+
+@media all and (min-width: 1100px) {
+	#landing #headshot:hover {
+		width: 30%;
+	}
+
+	#landing #text h1 {
+		font-size: 8rem;
+	}
+}
+
+@media all and (min-width: 750px) and (max-width: 1099px) {
+	nav li {
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+
+	#about img {
+		width: 30%;
+	}
+
+	#about #learn_more h2 {
+		font-size: 1.5rem;
+	}
+
+	#about h2 {
+		font-size: 2rem;
+	}
+
+	#about p {
+		font-size: 1.5rem;
+	}
+
+	#landing #headshot {
+		width: 35%;
+	}
+
+	#landing #text h1 {
+		font-size: 5rem;
+	}
+}
+
+@media all and (max-width: 749px) {
 	nav {
 		height: 125px;
 	}
@@ -174,13 +347,48 @@ nav li {
 		margin-right: 0;
 	}
 
+	footer {
+		top: 410vh;
+	}
+
+	footer h2 {
+		font-size: 1rem;
+	}
+
 	nav ul a {
 		font-size: 1.5rem;
 	}
 
-	#banner {
-		top: 125px;
-		height: calc(100vh - 125px);
+	#about {
+		flex-direction: column;
+		height: 300vh;
+	}
+
+	#about a {
+		height: 40vh;
+		width: 80%;
+	}
+
+	#about h2 {
+		text-align: center;
+		width: 100%;
+	}
+
+	#about #learn_more {
+		width: 80%;
+	}
+
+	#about #learn_more i {
+		display: none;
+	}
+
+	#about #collage {
+		width: 80%;
+		height: 40vh;
+	}
+
+	#about p {
+		width: 80%;
 	}
 
 	#icons {
@@ -210,5 +418,9 @@ nav li {
 
 	#links ul {
 		flex-direction: column;
+	}
+
+	#separator hr {
+		width: 20%;
 	}
 }

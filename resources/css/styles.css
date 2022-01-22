@@ -337,7 +337,7 @@ footer {
 	}
 }
 
-@media all and (max-width: 768px) or (hover: none) or (pointer: coarse) or (pointer: none) {
+@media (max-width: 768px) or (hover: none) or (pointer: coarse) or (pointer: none) {
 	nav {
 		height: 125px;
 	}

@@ -13,6 +13,62 @@ html {
 	overflow-x: hidden;
 }
 
+.fa-angle-down {
+	animation-iteration-count: infinite;
+	animation-name: arrow_down;
+	animation-duration: 2s;
+	color: white;
+	display: block;
+	margin-left: calc(50% - 25px);
+	margin-right: calc(50% - 25px);
+	position: absolute;
+}
+
+.information {
+	align-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.information h2 {
+	font-size: 3rem;
+}
+
+.information h2,
+h3,
+p,
+#ul {
+	text-align: center;
+	width: 100%;
+}
+
+.information h3 {
+	font-size: 2rem;
+}
+
+.information li,
+p {
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.section {
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	display: flex;
+	height: calc(100vh / 3);
+	justify-content: space-between;
+	width: 80%;
+}
+
+.section img {
+	border-radius: 15px;
+	height: 100%;
+	object-fit: cover;
+	width: 35%;
+}
+
 nav {
 	align-items: center;
 	background-color: black;
@@ -36,18 +92,6 @@ nav li {
 	margin-right: 5rem;
 }
 
-footer {
-	align-items: center;
-	background-color: black;
-	border-top: 5px solid red;
-	display: flex;
-	height: 100px;
-	justify-content: space-around;
-	position: absolute;
-	top: 210vh;
-	width: 100%;
-}
-
 #about {
 	align-items: center;
 	align-content: space-around;
@@ -60,6 +104,17 @@ footer {
 	position: absolute;
 	top: 110vh;
 	width: 100%;
+}
+
+#about a {
+	align-items: center;
+	background-position: center;
+	background-size: cover;
+	border: 5px solid white;
+	display: flex;
+	height: 30%;
+	transition: all 0.25s;
+	width: 30%;
 }
 
 #about #collage {
@@ -101,35 +156,11 @@ footer {
 	animation-duration: 2s;
 }
 
-#about a {
-	align-items: center;
-	background-size: cover;
-	background-position: center;
-	border: 5px solid white;
-	display: flex;
-	height: 30%;
-	justify-content: center;
-	transition: box-shadow 0.25s;
-	width: 30%;
-}
-
-#about a:hover {
-	box-shadow: 0 0 1rem white;
-}
-
 #about h2 {
 	font-size: 3rem;
 	font-weight: 700;
 	text-align: center;
 	text-shadow: 0.25rem 0.25rem black;
-}
-
-#about #academics {
-	background-image: url("/resources/images/old_main_blur.png");
-}
-
-#about #my_work {
-	background-image: url("/resources/images/skyline_blur.png");
 }
 
 #about p {
@@ -138,6 +169,40 @@ footer {
 	font-size: 2rem;
 	padding: 1rem;
 	width: 40%;
+}
+
+#academics_container {
+	background-image: url("/resources/images/old_main.jpg");
+}
+
+#academics_container h2,
+#my_work_container h2 {
+	text-align: center;
+	transition: font-size 0.25s;
+	width: 100%;
+}
+
+#academics_footer {
+	top: 175vh;
+}
+
+#academics_page_container {
+	align-content: space-around;
+	background-image: url("/resources/images/stars.jpg");
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	height: calc(175vh - 50px);
+	justify-content: center;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+#academics_page_container h1 {
+	font-size: 5rem;
+	text-align: center;
+	width: 100%;
 }
 
 #icons {
@@ -150,6 +215,22 @@ footer {
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 	transition: color 0.25s;
+}
+
+#index_footer {
+	top: 210vh;
+}
+
+#index_footer,
+#academics_footer {
+	align-items: center;
+	background-color: black;
+	border-top: 5px solid red;
+	display: flex;
+	height: 100px;
+	justify-content: space-around;
+	position: absolute;
+	width: 100%;
 }
 
 #landing {
@@ -221,6 +302,10 @@ footer {
 	z-index: 100;
 }
 
+#my_work_container {
+	background-image: url("/resources/images/skyline.png");
+}
+
 #separator {
 	align-items: center;
 	background-color: black;
@@ -242,17 +327,6 @@ footer {
 	background-color: white;
 	height: 0.1rem;
 	width: 35%;
-}
-
-.fa-angle-down {
-	animation-iteration-count: infinite;
-	animation-name: arrow_down;
-	animation-duration: 2s;
-	color: white;
-	display: block;
-	margin-left: calc(50% - 25px);
-	margin-right: calc(50% - 25px);
-	position: absolute;
 }
 
 @keyframes arrow_down {
@@ -284,9 +358,21 @@ footer {
 		color: red;
 	}
 
+	#about a:hover {
+		box-shadow: 0 0 1rem white;
+	}
+
+	#about a:hover > h2 {
+		font-size: 3.5rem;
+	}
+
 	#about #collage:hover {
 		height: 55%;
 		width: 45%;
+	}
+
+	#academics_container:hover {
+		background-image: url("/resources/images/old_main_blur.jpg");
 	}
 
 	#icons i:hover {
@@ -295,6 +381,10 @@ footer {
 
 	#logo h3:hover {
 		text-shadow: 0 0 0.2rem white;
+	}
+
+	#my_work_container:hover {
+		background-image: url("/resources/images/skyline_blur.png");
 	}
 }
 
@@ -314,8 +404,8 @@ footer {
 		margin-right: 2.5rem;
 	}
 
-	#about img {
-		width: 30%;
+	#about a:hover > h2 {
+		font-size: 2.25rem;
 	}
 
 	#about #learn_more h2 {
@@ -340,6 +430,16 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+	.section {
+		justify-content: space-around;
+		flex-direction: column;
+		height: calc(100vh / 1.5);
+	}
+
+	.section img {
+		width: 100%;
+	}
+
 	nav {
 		height: 125px;
 	}
@@ -347,14 +447,6 @@ footer {
 	nav li {
 		margin-left: 0;
 		margin-right: 0;
-	}
-
-	footer {
-		top: 410vh;
-	}
-
-	footer h2 {
-		font-size: 1rem;
 	}
 
 	nav ul a {
@@ -393,9 +485,26 @@ footer {
 		width: 80%;
 	}
 
+	#academics_footer {
+		top: 320vh;
+	}
+
+	#academics_page_container {
+		height: calc(325vh - 150px);
+		top: 125px;
+	}
+
 	#icons {
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	#index_footer {
+		top: 410vh;
+	}
+
+	#index_footer h2 {
+		font-size: 1rem;
 	}
 
 	#landing {

@@ -353,6 +353,10 @@ footer {
 	height: calc(125vh - 50px);
 }
 
+#my_work_page_container img {
+	transition: width 0.25s;
+}
+
 #my_work_footer {
 	top: 125vh;
 }
@@ -428,6 +432,10 @@ footer {
 
 	#academics_container:hover {
 		background-image: url("/resources/images/old_main_blur.jpg");
+	}
+
+	#my_work_page_container img:hover {
+		width: 50%;
 	}
 
 	#icons i:hover {

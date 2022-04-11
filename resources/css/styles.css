@@ -14,7 +14,7 @@ html {
 
 .fa-angle-down {
 	animation-iteration-count: infinite;
-	animation-name: arrow_down;
+	animation-name: arrow-down;
 	animation-duration: 2s;
 	color: white;
 	display: block;
@@ -52,13 +52,13 @@ p {
 	width: 100%;
 }
 
-.information #learn_more {
+.information #learn-more {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 }
 
-.information #learn_more li {
+.information #learn-more li {
 	background-color: red;
 	display: inline;
 	font-size: 1rem;
@@ -165,7 +165,7 @@ footer {
 	object-fit: cover;
 }
 
-#about #learn_more {
+#about #learn-more {
 	align-items: center;
 	background-color: red;
 	box-shadow: 0.75rem 0.75rem rgba(0, 0, 0, 0.5);
@@ -175,13 +175,13 @@ footer {
 	width: 25%;
 }
 
-#about #learn_more h2 {
+#about #learn-more h2 {
 	font-size: 2rem;
 }
 
-#about #learn_more i {
+#about #learn-more i {
 	animation-iteration-count: infinite;
-	animation-name: arrow_right;
+	animation-name: arrow-right;
 	animation-duration: 2s;
 }
 
@@ -200,23 +200,23 @@ footer {
 	width: 40%;
 }
 
-#academics_container {
-	background-image: url("/resources/images/old_main.jpg");
+#academics-container {
+	background-image: url("/resources/images/old-main.jpg");
 }
 
-#academics_container h2,
-#my_work_container h2 {
+#academics-container h2,
+#my-work-container h2 {
 	text-align: center;
 	transition: font-size 0.25s;
 	width: 100%;
 }
 
-#academics_footer {
+#academics-footer {
 	top: 175vh;
 }
 
-#academics_page_container,
-#my_work_page_container {
+#academics-page-container,
+#my-work-page-container {
 	align-content: space-around;
 	background-image: url("/resources/images/stars.jpg");
 	background-size: cover;
@@ -229,30 +229,30 @@ footer {
 	width: 100%;
 }
 
-#academics_page_container,
-#my_work_page_container h1 {
+#academics-page-container,
+#my-work-page-container h1 {
 	font-size: 5rem;
 	text-align: center;
 	width: 100%;
 }
 
-#digital_illustrations {
+#digital-illustrations {
 	display: block;
 	height: calc(100vh / 2);
 }
 
-#digital_illustrations h2 {
+#digital-illustrations h2 {
 	font-size: 3rem;
 	text-align: center;
 }
 
-#digital_illustrations img {
+#digital-illustrations img {
 	height: calc((100vh / 2) - 4rem);
 	object-fit: contain;
 	width: 24%;
 }
 
-#digital_illustrations #illustrations {
+#digital-illustrations #illustrations {
 	display: flex;
 	height: 100%;
 	justify-content: space-around;
@@ -271,7 +271,7 @@ footer {
 	transition: color 0.25s;
 }
 
-#index_footer {
+#index-footer {
 	top: 210vh;
 }
 
@@ -344,19 +344,19 @@ footer {
 	z-index: 100;
 }
 
-#my_work_container {
+#my-work-container {
 	background-image: url("/resources/images/skyline.png");
 }
 
-#my_work_page_container {
+#my-work-page-container {
 	height: calc(125vh - 50px);
 }
 
-#my_work_page_container img {
+#my-work-page-container img {
 	transition: width 0.25s;
 }
 
-#my_work_footer {
+#my-work-footer {
 	top: 125vh;
 }
 
@@ -383,7 +383,7 @@ footer {
 	width: 35%;
 }
 
-@keyframes arrow_down {
+@keyframes arrow-down {
 	0% {
 		top: 85%;
 	}
@@ -395,7 +395,7 @@ footer {
 	}
 }
 
-@keyframes arrow_right {
+@keyframes arrow-right {
 	0% {
 		padding-right: 0;
 	}
@@ -429,11 +429,11 @@ footer {
 		width: 45%;
 	}
 
-	#academics_container:hover {
-		background-image: url("/resources/images/old_main_blur.jpg");
+	#academics-container:hover {
+		background-image: url("/resources/images/old-main-blur.jpg");
 	}
 
-	#my_work_page_container img:hover {
+	#my-work-page-container img:hover {
 		width: 50%;
 	}
 
@@ -445,8 +445,8 @@ footer {
 		text-shadow: 0 0 0.2rem white;
 	}
 
-	#my_work_container:hover {
-		background-image: url("/resources/images/skyline_blur.png");
+	#my-work-container:hover {
+		background-image: url("/resources/images/skyline-blur.png");
 	}
 }
 
@@ -470,7 +470,7 @@ footer {
 		font-size: 2.25rem;
 	}
 
-	#about #learn_more h2 {
+	#about #learn-more h2 {
 		font-size: 1.5rem;
 	}
 
@@ -482,7 +482,7 @@ footer {
 		font-size: 1.5rem;
 	}
 
-	#academics_page_container h1 {
+	#academics-page-container h1 {
 		font-size: 4rem;
 	}
 
@@ -496,11 +496,11 @@ footer {
 }
 
 @media all and (max-width: 768px) {
-	.information #learn_more {
+	.information #learn-more {
 		flex-direction: column;
 	}
 
-	.information #learn_more a {
+	.information #learn-more a {
 		width: 100%;
 	}
 
@@ -537,11 +537,11 @@ footer {
 		width: 100%;
 	}
 
-	#about #learn_more {
+	#about #learn-more {
 		width: 80%;
 	}
 
-	#about #learn_more i {
+	#about #learn-more i {
 		display: none;
 	}
 
@@ -554,22 +554,22 @@ footer {
 		width: 80%;
 	}
 
-	#academics_footer {
+	#academics-footer {
 		top: 320vh;
 	}
 
-	#academics_page_container {
+	#academics-page-container {
 		height: calc(325vh - 150px);
 		top: 125px;
 	}
 
-	#academics_page_container .section {
+	#academics-page-container .section {
 		justify-content: space-around;
 		flex-direction: column;
 		height: calc(100vh / 1.5);
 	}
 
-	#academics_page_container h1 {
+	#academics-page-container h1 {
 		font-size: 4rem;
 	}
 
@@ -578,11 +578,11 @@ footer {
 		justify-content: center;
 	}
 
-	#index_footer {
+	#index-footer {
 		top: 410vh;
 	}
 
-	#index_footer h2 {
+	#index-footer h2 {
 		font-size: 1rem;
 	}
 
@@ -610,29 +610,29 @@ footer {
 		flex-direction: column;
 	}
 
-	#my_work_footer {
+	#my-work-footer {
 		top: 170vh;
 	}
 
-	#my_work_page_container {
+	#my-work-page-container {
 		height: calc(175vh - 150px);
 		top: 125px;
 	}
 
-	#my_work_page_container #projectdsm {
+	#my-work-page-container #projectdsm {
 		flex-direction: column;
 		height: calc(100vh / 1.5);
 	}
 
-	#my_work_page_container #projectdsm .information {
+	#my-work-page-container #projectdsm .information {
 		height: 100%;
 	}
 
-	#my_work_page_container #projectdsm iframe {
+	#my-work-page-container #projectdsm iframe {
 		height: 50%;
 	}
 
-	#my_work_page_container #projectdsm #learn_more {
+	#my-work-page-container #projectdsm #learn-more {
 		display: none;
 	}
 

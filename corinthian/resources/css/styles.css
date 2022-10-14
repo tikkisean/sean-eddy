@@ -39,6 +39,15 @@ hr {
 	border-top: 0.25rem solid black;
 }
 
+iframe {
+	border: none;
+	margin-bottom: 3rem;
+}
+
+img {
+	max-width: 80vw;
+}
+
 span {
 	font-family: "Cinzel", serif;
 }
@@ -89,7 +98,7 @@ span {
 #card-container {
 	display: flex;
 	justify-content: space-around;
-	height: 65vh;
+	height: 70vh;
 }
 
 #hero-container {
@@ -121,8 +130,18 @@ span {
 	font-size: 3rem;
 }
 
+@media all and (min-width: 1281px) {
+	.card h1 {
+		font-size: 2.5rem;
+	}
+}
+
 @media all and (max-width: 1280px) {
 	h3 {
+		font-size: 1.5rem;
+	}
+
+	.card p {
 		font-size: 1.5rem;
 	}
 

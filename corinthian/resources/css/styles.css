@@ -74,7 +74,7 @@ span {
 }
 
 .card p {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin: 1rem;
 }
 
@@ -142,7 +142,7 @@ span {
 	}
 
 	.card p {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 
 	#hero-content-container h1 {
@@ -186,7 +186,7 @@ span {
 
 	#card-container {
 		flex-direction: column;
-		height: 150vh;
+		height: 200vh;
 		justify-content: space-around;
 	}
 

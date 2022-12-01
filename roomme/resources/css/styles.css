@@ -69,7 +69,7 @@ iframe {
 .text {
 	background: rgb(0, 176, 80);
 	border-radius: 1rem;
-	box-shadow: 0 0 50px 25px #00d96e;
+	box-shadow: 0 0 50px 1rem #00d96e;
 	color: white;
 	padding: 3rem;
 	width: 80%;

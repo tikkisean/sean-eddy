@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Sean Eddy</title>
-		<link href="resources/css/styles.css" type="text/css" rel="stylesheet" />
+		<link href="/resources/css/styles.css" type="text/css" rel="stylesheet" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
 			rel="stylesheet"
@@ -11,7 +11,7 @@
 		<link
 			rel="shortcut icon"
 			type="image/png"
-			href="resources/images/logo.png"
+			href="/resources/images/logo.png"
 		/>
 		<script
 			src="https://kit.fontawesome.com/f8beb9cddc.js"
@@ -22,15 +22,15 @@
 	<body>
 		<header>
 			<nav>
-				<div id="logo">
-					<a href=""><img src="resources/images/logo.png" /></a>
-					<h3><a href="">Sean Eddy</a></h3>
+				<div class="logo">
+					<a href="/"><img src="/resources/images/logo.png" /></a>
+					<h3><a href="/">Sean Eddy</a></h3>
 				</div>
 				<div id="links">
-					<ul>
-						<li><a href="academics/">Academics</a></li>
-						<li><a href="my-work/">My Work</a></li>
-					</ul>
+					<div id="page-links">
+						<h3><a href="/academics/">Academics</a></h3>
+						<h3><a href="/projects/">Projects</a></h3>
+					</div>
 					<div id="icons">
 						<a
 							href="https://www.linkedin.com/in/sean-eddy-6326051ba"
@@ -40,10 +40,10 @@
 						<a href="https://github.com/tikkisean" target="_blank"
 							><i class="fab fa-github-square fa-2x"></i
 						></a>
-						<a href="mailto:tikkisean@gmail.com"
+						<a href="mailto:sean@seaneddy.com"
 							><i class="fas fa-envelope fa-2x"></i
 						></a>
-					<div class="links">
+					<div>
 				</div>
 			</nav>
 		</header>
@@ -52,7 +52,6 @@
 				<img id="headshot" src="resources/images/headshot.jpg" />
 				<div id="text">
 					<h1>Hey! My name is Sean.</h1>
-					<hr />
 				</div>
 			</div>
 			<i class="fas fa-angle-down fa-5x"></i>
@@ -61,37 +60,38 @@
 				<h2>Get to know me</h2>
 				<hr />
 			</div>
-			<hr />
-			<div id="about">
-				<div id="collage">
-					<div class="row">
-						<img src="resources/images/sunset.jpg" />
-						<img src="resources/images/bridge.jpg" />
+			<div class="main-container" id="about">
+				<div class="page-container">
+					<div id="collage">
+						<div class="row">
+							<img src="resources/images/cycling.jpg" />
+							<img src="resources/images/mural.jpg" />
+						</div>
+						<div class="row">
+							<img src="resources/images/lego-house.jpg" />
+							<img src="resources/images/hike.jpg" />
+						</div>
 					</div>
-					<div class="row">
-						<img src="resources/images/lemmon.jpg" />
-						<img src="resources/images/desert.jpg" />
+					<p>I am currently a sophomore at the University of Arizona pursuing a B.S. and ultimately an M.S. in Computer Science with a minor in Entrepreneurship and Innovation. When I'm not coding, I'm out exploring the Sonoran Desert on my bike, finding my new favorite Mexican restaurant, or designing Lego models.</p>
+					<div id="learn-more">
+						<h2>Learn more</h2>
+						<i class="fas fa-arrow-right fa-2x"></i>
 					</div>
+					<a id="academics-container" href="/academics/">
+						<h2>Academics</h2>
+					</a>
+					<a id="projects-container" href="/projects/">
+						<h2>Projects</h2>
+					</a>
 				</div>
-				<p>I am currently a first-year student at the University of Arizona pursuing a B.S. and ultimately a M.S. in Computer Science, as well as an entrepreneurship minor. When I'm not coding, I'm out exploring the Sonoran Desert on my bike or finding my new favorite Mexican restaurant.</p>
-				<div id="learn-more">
-					<h2>Learn more</h2>
-					<i class="fas fa-arrow-right fa-2x"></i>
-				</div>
-				<a id="academics-container" href="academics.html">
-					<h2>Academics</h2>
-				</a>
-				<a id="my-work-container" href="my-work.html">
-					<h2>My Work</h2>
-				</a>
 			</div>
 		</main>
-		<footer id="index-footer">
-			<div id="logo">
-				<a href=""><img src="resources/images/logo.png" /></a>
-				<h3><a href="">Sean Eddy</a></h3>
+		<footer>
+			<div class="logo">
+				<a href="/"><img src="/resources/images/logo.png" /></a>
+				<h3><a href="/">Sean Eddy</a></h3>
 			</div>
-			<h2>Site designed from scratch in HTML5/CSS.</h2>
+			<h2>Custom site designed without frameworks, check out the source code on <a href="https://github.com/tikkisean/tikkisean.github.io" target="_blank">Github</a>.</h2>
 		</footer>
 	</body>
 </html>

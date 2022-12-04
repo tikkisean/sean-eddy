@@ -4,7 +4,6 @@
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
-	position: relative;
 }
 
 footer {
@@ -20,6 +19,7 @@ h1 {
 header {
 	justify-content: space-between;
 	position: fixed;
+	top: 0;
 }
 
 header,
@@ -47,6 +47,10 @@ header button {
 iframe {
 	border: none;
 	margin: 0 10%;
+}
+
+main {
+	margin-top: 75px;
 }
 
 .logo {
@@ -79,13 +83,15 @@ iframe {
 	margin-bottom: 2rem;
 }
 
+.text-and-image-container {
+	padding: 1rem 0;
+}
+
 .text-and-image-container,
 #hero-container {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	height: 50vh;
-	margin-bottom: 10vh;
 	top: 75px;
 	width: 100%;
 }
@@ -123,6 +129,7 @@ iframe {
 
 #hero-container {
 	height: calc(100vh - 75px);
+	top: 75px;
 }
 
 #hero-container h1 {
@@ -151,6 +158,10 @@ iframe {
 		font-weight: 400;
 	}
 
+	footer .logo h3 {
+		font-size: 1rem;
+	}
+
 	h1 {
 		font-size: 2rem !important;
 	}
@@ -173,7 +184,7 @@ iframe {
 
 	.text-and-image-container {
 		flex-direction: column;
-		height: 100vh;
+		gap: 2rem;
 	}
 
 	.text-and-image-container img {
@@ -182,14 +193,17 @@ iframe {
 
 	.text-and-image-container img,
 	#hero-container img {
-		max-height: 50vh;
 		max-width: none;
-		width: 100%;
+		width: 75%;
 	}
 
 	.text-container {
-		height: 50vh;
 		width: 100%;
+	}
+
+	#hero-container {
+		gap: 2rem;
+		padding-bottom: 2rem;
 	}
 
 	#hero-container,

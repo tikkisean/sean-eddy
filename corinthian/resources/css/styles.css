@@ -185,7 +185,7 @@ span {
 
 	#card-container {
 		flex-direction: column;
-		height: 200vh;
+		gap: 2rem;
 		justify-content: space-around;
 	}
 

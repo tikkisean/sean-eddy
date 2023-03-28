@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.logo {
+	align-items: center;
+	display: flex;
+	padding-right: 2.5rem;
+}
+
+.logo h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	font-style: italic;
+	margin-left: 0.5rem;
+	transition: text-shadow 0.25s;
+	white-space: nowrap;
+}
+
+.logo img {
+	height: 3.9rem;
+}
+
+@media (hover: hover) {
+	.logo h3:hover {
+		text-shadow: 0 0 0.1rem white;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.logo {
+		padding: 0;
+	}
+}

@@ -1,0 +1,220 @@
+.bikes-on-lock * {
+	box-sizing: border-box;
+	font-family: "Orbitron", sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+}
+
+.bikes-on-lock footer {
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.bikes-on-lock header {
+	justify-content: space-between;
+}
+
+.bikes-on-lock header,
+.bikes-on-lock footer {
+	align-items: center;
+	background: rgb(171, 5, 32);
+	background: linear-gradient(270deg, rgb(171, 5, 32) 0%, rgb(21, 36, 74) 100%);
+	display: flex;
+	height: 10vh;
+	width: 100%;
+}
+
+.bikes-on-lock header button {
+	background: rgb(21, 36, 74);
+	border: none;
+	border-radius: 0.75rem;
+	color: white;
+	font-size: 1.5rem;
+	margin: 10%;
+	padding: 1rem 2rem;
+}
+
+.bikes-on-lock hr {
+	border-top: 0.25rem solid black;
+}
+
+.bikes-on-lock iframe {
+	border: none;
+	margin: 3rem;
+}
+
+.bikes-on-lock img {
+	object-fit: cover;
+}
+
+.bikes-on-lock span {
+	color: rgb(171, 5, 32);
+}
+
+.bikes-on-lock .card {
+	background: rgb(171, 5, 32);
+	border-radius: 1rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 2rem;
+	width: 30vw;
+}
+
+.bikes-on-lock .card h1 {
+	margin: 1rem;
+}
+
+.bikes-on-lock .card img {
+	border-radius: 1rem;
+	height: 20vh;
+	margin: 0 1rem;
+	max-width: 100%;
+}
+
+.bikes-on-lock .card p {
+	font-size: 1.5rem;
+	margin: 1rem;
+}
+
+.bikes-on-lock .bikes-on-lock-logo {
+	align-items: center;
+	display: flex;
+	height: 40px;
+	margin: 10%;
+}
+
+.bikes-on-lock .bikes-on-lock-logo h3 {
+	color: white;
+	font-size: 3rem;
+	margin: 5px;
+}
+
+.bikes-on-lock .bikes-on-lock-logo img {
+	height: 100%;
+}
+
+.bikes-on-lock #card-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100vw;
+}
+
+.bikes-on-lock #hero-container {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+}
+
+.bikes-on-lock #hero-content-container {
+	align-items: center;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	width: 80vw;
+}
+
+.bikes-on-lock #hero-content-container img {
+	max-height: 75vh;
+	max-width: 50vw;
+}
+
+.bikes-on-lock #hero-text-container {
+	align-items: center;
+	background: rgb(171, 5, 32);
+	border-radius: 2rem;
+	box-shadow: 0 0 2rem black;
+	margin: 2.5rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2rem;
+}
+
+.bikes-on-lock #hero-text-container h1 {
+	font-size: 3rem;
+}
+
+.bikes-on-lock #transition {
+	background: rgb(171, 5, 32);
+	background: linear-gradient(270deg, rgb(171, 5, 32) 0%, rgb(21, 36, 74) 100%);
+	color: white;
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	padding: 3rem;
+}
+
+@media all and (min-width: 1281px) {
+	.bikes-on-lock .card h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media all and (max-width: 1280px) {
+	.bikes-on-lock h3 {
+		font-size: 1.5rem;
+	}
+
+	.bikes-on-lock .card p {
+		font-size: 1.25rem;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.bikes-on-lock header {
+		justify-content: space-around;
+	}
+
+	.bikes-on-lock header button {
+		font-size: 1rem;
+		margin: 5%;
+	}
+
+	.bikes-on-lock footer h3 {
+		font-size: 1rem;
+	}
+
+	.bikes-on-lock .card {
+		width: 90%;
+	}
+
+	.bikes-on-lock .card p {
+		font-size: 1.25rem;
+	}
+
+	.bikes-on-lock .bikes-on-lock-logo {
+		margin: 5%;
+	}
+
+	.bikes-on-lock .bikes-on-lock-logo h3 {
+		font-size: 1.5rem;
+	}
+
+	.bikes-on-lock #card-container {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.bikes-on-lock #hero-content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.bikes-on-lock #hero-content-container h1 {
+		order: 3;
+		width: 80vw;
+	}
+
+	.bikes-on-lock #hero-content-container img {
+		height: 20vh;
+		max-width: 100%;
+	}
+
+	.bikes-on-lock #hero-text-container {
+		flex-direction: column-reverse;
+	}
+}

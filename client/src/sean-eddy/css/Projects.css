@@ -1,0 +1,74 @@
+.projects .button-container {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.projects .button-container a {
+	text-decoration: none !important;
+}
+
+.projects .button-container p {
+	background-color: red;
+	border-radius: 1rem;
+	font-size: 1.25rem !important;
+	padding: 0.75rem;
+	transition: box-shadow 0.25s;
+}
+
+.projects #illustrations {
+	display: flex;
+	height: 100%;
+}
+
+.projects #illustrations img {
+	transition: width 0.5s;
+}
+
+.projects #mockups-container {
+	display: flex;
+	gap: 1rem;
+}
+
+.projects #mockups-container div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.projects #mockups-container img {
+	width: 100%;
+	transition: box-shadow 0.25s;
+}
+
+@media (hover: hover) {
+	.projects .button-container p:hover {
+		box-shadow: 0 0 0.5rem white;
+	}
+
+	.projects #illustrations img:hover {
+		width: 100%;
+	}
+
+	.projects #mockups-container img:hover {
+		box-shadow: 0 0 0.75rem white;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.projects .button-container {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.projects #illustrations {
+		flex-direction: column;
+		height: auto;
+		gap: 1rem;
+	}
+
+	.projects #mockups-container {
+		flex-direction: column;
+	}
+}

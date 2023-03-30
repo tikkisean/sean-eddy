@@ -1,0 +1,71 @@
+.sean-eddy-navbar nav {
+	align-items: center;
+	background-color: black;
+	border-bottom: 5px solid red;
+	box-shadow: 0 5px 5px 0 rgba(76, 82, 103, 100%);
+	display: flex;
+	gap: 2.5rem;
+	height: 4rem;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 100;
+}
+
+.sean-eddy-navbar #icons {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	padding-left: 1rem;
+}
+
+.sean-eddy-navbar #icons i {
+	transition: color 0.25s;
+}
+
+.sean-eddy-navbar #links {
+	align-items: center;
+	display: flex;
+	gap: 5rem;
+	padding-right: 2.5rem;
+}
+
+.sean-eddy-navbar #links a {
+	transition: color 0.25s;
+}
+
+.sean-eddy-navbar #page-links {
+	align-items: center;
+	display: flex;
+	gap: 5rem;
+}
+
+@media (hover: hover) {
+	.sean-eddy-navbar #links a:hover {
+		color: red;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.sean-eddy-navbar nav {
+		flex-direction: column;
+		gap: 0rem;
+		height: 10rem;
+		justify-content: space-around;
+	}
+
+	.sean-eddy-navbar #links {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 0;
+	}
+
+	.sean-eddy-navbar #icons {
+		padding: 0;
+	}
+
+	.sean-eddy-navbar #page-links {
+		gap: 2rem;
+	}
+}

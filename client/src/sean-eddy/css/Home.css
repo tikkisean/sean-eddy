@@ -1,0 +1,304 @@
+.home .fa-angle-down {
+	animation-iteration-count: infinite;
+	animation-name: arrow-down;
+	animation-duration: 2s;
+	color: white;
+	display: block;
+	margin-left: calc(50% - 25px);
+	margin-right: calc(50% - 25px);
+	position: absolute;
+	z-index: 10;
+}
+
+.home #about a {
+	align-items: center;
+	background-position: center;
+	background-size: cover;
+	border: 5px solid white;
+	display: flex;
+	transition: all 0.25s;
+}
+
+.home #about .page-container {
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.home #about #collage {
+	align-content: center;
+	background-color: black;
+	border: 5px solid white;
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	display: flex;
+	flex-wrap: flex;
+	height: 50%;
+	transition: all 0.25s;
+	width: 40%;
+}
+
+.home #about #collage img {
+	display: block;
+	height: 50%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.home #about #collage .row {
+	width: 50%;
+}
+
+.home #about #learn-more {
+	align-items: center;
+	background-color: red;
+	box-shadow: 0.75rem 0.75rem rgba(0, 0, 0, 0.5);
+	display: flex;
+	height: 5rem;
+	justify-content: space-between;
+	padding: 1rem;
+	position: relative;
+	width: 25%;
+}
+
+.home #about #learn-more h2 {
+	font-size: 2rem;
+	text-shadow: 0.2rem 0.2rem black;
+	width: 70%;
+}
+
+.home #about #learn-more svg {
+	animation-iteration-count: infinite;
+	animation-name: arrow-right;
+	animation-duration: 2s;
+	position: absolute;
+}
+
+.home #about h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 0.25rem 0.25rem black;
+}
+
+.home #about p {
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	font-size: 1.75rem;
+	padding: 1rem;
+	width: 40%;
+}
+
+.home #about .page-container {
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.home #academics-container {
+	background-image: url("/public/sean-eddy/images/old-main.jpg");
+}
+
+.home #academics-container h2,
+.home #projects-container h2 {
+	text-align: center;
+	transition: font-size 0.25s;
+	width: 100%;
+}
+
+.home #landing {
+	align-items: center;
+	background-image: url("/public/sean-eddy/images/banner.jpg");
+	background-size: cover;
+	display: flex;
+	height: calc(100vh - 4rem);
+	justify-content: space-around;
+}
+
+.home #landing #headshot {
+	border: 5px solid black;
+	border-radius: 50%;
+	width: 25%;
+	transition: width 0.25s;
+}
+
+.home #landing #text {
+	background-color: rgba(255, 0, 0, 0.5);
+	box-shadow: 0.75rem 0.75rem rgba(0, 0, 0, 0.5);
+	padding: 3rem;
+	width: 60%;
+}
+
+.home #landing #text h1 {
+	font-style: italic;
+	font-weight: 700;
+	text-shadow: 0.5rem 0.5rem black;
+}
+
+.home #projects-container {
+	background-image: url("/public/sean-eddy/images/skyline.png");
+}
+
+.home #separator {
+	align-items: center;
+	background-color: black;
+	display: flex;
+	height: 5rem;
+	justify-content: center;
+	width: 100%;
+}
+
+.home #separator h2 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	text-align: center;
+}
+
+.home #separator hr {
+	background-color: white;
+	height: 0.1rem;
+	width: 35%;
+}
+
+@keyframes arrow-down {
+	0% {
+		top: 85vh;
+	}
+	50% {
+		top: 90vh;
+	}
+	100% {
+		top: 85vh;
+	}
+}
+
+@keyframes arrow-right {
+	0% {
+		right: 10%;
+	}
+	50% {
+		right: 20%;
+	}
+	100% {
+		right: 10%;
+	}
+}
+
+@media (hover: hover) {
+	.home #about a:hover {
+		box-shadow: 0 0 1rem white;
+	}
+
+	.home #about a:hover > h2 {
+		font-size: 3.5rem;
+	}
+
+	.home #about #collage:hover {
+		height: 55%;
+		width: 45%;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	.home #about a {
+		height: 20vw;
+		width: 20vw;
+	}
+
+	.home #landing #headshot:hover {
+		width: 28%;
+	}
+
+	.home #landing #text h1 {
+		font-size: 8rem;
+	}
+}
+
+@media all and (min-width: 769px) and (max-width: 1099px) {
+	.home #about a {
+		height: 25vw;
+		width: 25vw;
+	}
+
+	.home #about a:hover > h2 {
+		font-size: 2.25rem;
+	}
+
+	.home #about #learn-more h2 {
+		font-size: 1.5rem;
+	}
+
+	.home #about h2 {
+		font-size: 2rem;
+	}
+
+	.home #about p {
+		font-size: 1.5rem;
+	}
+
+	.home #landing #headshot {
+		width: 35%;
+	}
+
+	.home #landing #text h1 {
+		font-size: 5rem;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.home #about a {
+		height: 40vw;
+		width: 80vw;
+	}
+
+	.home #about h2 {
+		font-size: 2rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.home #about #learn-more {
+		width: 80%;
+	}
+
+	.home #about #learn-more h2 {
+		width: 100%;
+	}
+
+	.home #about #learn-more svg {
+		display: none;
+	}
+
+	.home #about #collage {
+		width: 80%;
+		height: 40vh;
+	}
+
+	.home #about p {
+		font-size: 1.25rem;
+		width: 80%;
+	}
+
+	.home #landing {
+		flex-direction: column;
+		height: calc(100vh - 10rem);
+		justify-content: space-evenly;
+	}
+
+	.home #landing #headshot {
+		width: 50%;
+	}
+
+	.home #landing #text {
+		width: 100%;
+		height: 40%;
+	}
+
+	.home #landing #text h1 {
+		font-size: 3rem;
+		text-shadow: 0.325rem 0.325rem black;
+	}
+
+	.home #separator hr {
+		width: 20%;
+	}
+}

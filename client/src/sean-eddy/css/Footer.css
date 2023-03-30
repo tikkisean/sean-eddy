@@ -1,0 +1,32 @@
+.sean-eddy-footer {
+	align-items: center;
+	background-color: black;
+	border-top: 5px solid red;
+	display: flex;
+	height: 6rem;
+	justify-content: space-around;
+	padding: 0 2rem !important;
+	width: 100%;
+}
+
+.sean-eddy-footer h2 {
+	font-size: 1.25rem;
+	padding: 0 2rem;
+}
+
+.sean-eddy-footer h2 a {
+	text-decoration-line: underline;
+}
+
+@media all and (max-width: 768px) {
+	.sean-eddy-footer {
+		flex-direction: column;
+		gap: 1rem;
+		height: min-content;
+		padding: 1rem 0;
+	}
+
+	.sean-eddy-footer h2 {
+		font-size: 1rem;
+	}
+}

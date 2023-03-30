@@ -1,0 +1,206 @@
+.corinthian * {
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+}
+
+.corinthian footer {
+	justify-content: center;
+}
+
+.corinthian header {
+	justify-content: space-between;
+}
+
+.corinthian header,
+.corinthian footer {
+	align-items: center;
+	background: black;
+	display: flex;
+	height: 10vh;
+	width: 100%;
+}
+
+.corinthian header button {
+	background: red;
+	border: none;
+	border-radius: 0.75rem;
+	color: white;
+	font-size: 1.5rem;
+	margin: 10%;
+	padding: 1rem 2rem;
+	white-space: nowrap;
+}
+
+.corinthian hr {
+	border-top: 0.25rem solid black;
+}
+
+.corinthian iframe {
+	border: none;
+	margin-bottom: 3rem;
+}
+
+.corinthian img {
+	max-width: 80vw;
+}
+
+.corinthian span {
+	font-family: "Cinzel", serif;
+}
+
+.corinthian .card {
+	background: red;
+	border-radius: 1rem;
+	color: white;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 0 2rem;
+}
+
+.corinthian .card h1 {
+	margin: 1rem;
+}
+
+.corinthian .card img {
+	border-radius: 1rem;
+	margin: 0 1rem;
+	max-width: calc(100% - 2rem);
+}
+
+.corinthian .card p {
+	font-size: 1.5rem;
+	margin: 1rem;
+}
+
+.corinthian .logo {
+	align-items: center;
+	display: flex;
+	height: 40px;
+	margin: 10%;
+}
+
+.corinthian .logo h3 {
+	color: white;
+	font-size: 3rem;
+	margin: 5px;
+}
+
+.corinthian .logo img {
+	height: 100%;
+}
+
+.corinthian #card-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.corinthian #hero-container {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+}
+
+.corinthian #hero-content-container {
+	align-items: center;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	width: 80vw;
+}
+
+.corinthian #hero-content-container img {
+	height: 75vh;
+}
+
+.corinthian #hero-content-container h1 {
+	font-size: 3rem;
+	margin: 2.5rem;
+	width: 20vw;
+}
+
+.corinthian #transition {
+	margin: 3rem;
+	font-size: 3rem;
+}
+
+@media all and (min-width: 1281px) {
+	.corinthian .card h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media all and (max-width: 1280px) {
+	.corinthian h3 {
+		font-size: 1.5rem;
+	}
+
+	.corinthian .card p {
+		font-size: 1.25rem;
+	}
+
+	.corinthian #hero-content-container h1 {
+		font-size: 2rem;
+	}
+
+	.corinthian #hero-content-container img {
+		height: 50vh;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.corinthian header {
+		justify-content: space-around;
+	}
+
+	.corinthian header button {
+		font-size: 1rem;
+		margin: 5%;
+	}
+
+	.corinthian footer h3 {
+		font-size: 1rem;
+	}
+
+	.corinthian .card {
+		flex: 0;
+	}
+
+	.corinthian .card p {
+		font-size: 1.25rem;
+	}
+
+	.corinthian .logo {
+		margin: 5%;
+	}
+
+	.corinthian .logo h3 {
+		font-size: 1.5rem;
+	}
+
+	.corinthian #card-container {
+		flex-direction: column;
+		gap: 2rem;
+		justify-content: space-around;
+	}
+
+	.corinthian #hero-content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.corinthian #hero-content-container h1 {
+		order: 3;
+		width: 80vw;
+	}
+
+	.corinthian #hero-content-container img {
+		height: 30vh;
+	}
+}

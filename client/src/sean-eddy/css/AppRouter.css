@@ -1,0 +1,153 @@
+.sean-eddy * {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+}
+
+.sean-eddy main {
+	margin-top: 4rem;
+}
+
+.sean-eddy .information {
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem;
+	width: 80%;
+}
+
+.sean-eddy .information h2 {
+	font-size: 2rem;
+}
+
+.sean-eddy .information h2,
+.sean-eddy .information h3,
+.sean-eddy .information ul {
+	text-align: center;
+	width: 100%;
+}
+
+.sean-eddy .information h3 {
+	font-size: 1.5rem;
+}
+
+.sean-eddy .information li,
+.sean-eddy .information p {
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.sean-eddy .information span {
+	color: red;
+}
+
+.sean-eddy .main-container {
+	background-image: url("/public/sean-eddy/images/stars.jpg");
+	display: flex;
+	justify-content: center;
+}
+
+.sean-eddy .page-container {
+	align-content: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.sean-eddy .page-container h1 {
+	font-size: 5rem;
+	text-align: center;
+	width: 100%;
+}
+
+.sean-eddy .section {
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0.75rem 0.75rem rgba(255, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.sean-eddy .section a {
+	text-decoration-line: underline;
+}
+
+.sean-eddy .section img {
+	border-radius: 15px;
+	height: 100%;
+	object-fit: cover;
+	width: 35%;
+}
+
+.sean-eddy-logo {
+	align-items: center;
+	display: flex;
+	padding-right: 2.5rem;
+}
+
+.sean-eddy-logo h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	font-style: italic;
+	margin-left: 0.5rem;
+	transition: text-shadow 0.25s;
+	white-space: nowrap;
+}
+
+.sean-eddy-logo img {
+	height: 3.9rem;
+}
+
+@media (hover: hover) {
+	.sean-eddy-logo h3:hover {
+		text-shadow: 0 0 0.1rem white;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	.sean-eddy .page-container {
+		width: 70%;
+	}
+}
+
+@media all and (min-width: 769px) and (max-width: 1099px) {
+	.sean-eddy .page-container {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.sean-eddy main {
+		margin-top: 10rem;
+	}
+
+	.sean-eddy .information {
+		width: 100%;
+	}
+
+	.sean-eddy .page-container {
+		width: 90%;
+	}
+
+	.sean-eddy .page-container h1 {
+		font-size: 3rem;
+	}
+
+	.sean-eddy .section {
+		justify-content: space-around;
+		flex-direction: column;
+	}
+
+	.sean-eddy .section img,
+	.sean-eddy .section iframe {
+		width: 100%;
+	}
+
+	.sean-eddy-logo {
+		padding: 0;
+	}
+}

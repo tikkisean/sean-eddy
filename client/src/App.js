@@ -5,6 +5,7 @@ import BikesOnLock from "./mockups/bikes-on-lock/js/BikesOnLock";
 import Corinthian from "./mockups/corinthian/js/Corinthian";
 import Roomme from "./mockups/roomme/js/Roomme";
 import StringSearch from "./string-search/js/StringSearch";
+import Traffic from "./traffic/js/Traffic";
 import "./App.css";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 				<Route element={<Corinthian />} path="/mockups/corinthian"></Route>
 				<Route element={<Roomme />} path="/mockups/roomme"></Route>
 				<Route element={<StringSearch />} path="/string-search" />
+				<Route element={<Traffic />} path="/traffic" />
 			</Routes>
 		</BrowserRouter>
 	);

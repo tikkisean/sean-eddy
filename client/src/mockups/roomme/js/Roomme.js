@@ -9,7 +9,7 @@ export default function Roomme() {
 	return (
 		<div className="roomme">
 			<header>
-				<div class="logo">
+				<div className="logo">
 					<img alt="" src="/mockups/roomme/images/favicon-white.png" />
 					<h3>RoomMe</h3>
 				</div>
@@ -17,8 +17,8 @@ export default function Roomme() {
 			</header>
 			<main>
 				<div id="hero-container">
-					<div class="text-container">
-						<div class="text">
+					<div className="text-container">
+						<div className="text">
 							<h1>You deserve affordable housing.</h1>
 							<h2>
 								Finding the perfect roommate has never been easier. Use our
@@ -41,10 +41,10 @@ export default function Roomme() {
 					</h2>
 				</div>
 				<h1 id="transition">Start using RoomMe in 3 easy steps</h1>
-				<div class="text-and-image-container" id="step-1">
+				<div className="text-and-image-container" id="step-1">
 					<img alt="Sign in screen" src="/mockups/roomme/images/mock-1.png" />
-					<div class="text-container">
-						<div class="text">
+					<div className="text-container">
+						<div className="text">
 							<h1>Sign up with your school email</h1>
 							<h2>
 								We protect your privacy. Unlike our competitors, users must
@@ -53,9 +53,9 @@ export default function Roomme() {
 						</div>
 					</div>
 				</div>
-				<div class="text-and-image-container" id="step-2">
-					<div class="text-container">
-						<div class="text">
+				<div className="text-and-image-container" id="step-2">
+					<div className="text-container">
+						<div className="text">
 							<h1>Tell us what you're looking for</h1>
 							<h2>
 								We collect information about your preferences to help make our
@@ -68,10 +68,10 @@ export default function Roomme() {
 						src="/mockups/roomme/images/mock-3.png"
 					/>
 				</div>
-				<div class="text-and-image-container" id="step-3">
+				<div className="text-and-image-container" id="step-3">
 					<img alt="Profiles screen" src="/mockups/roomme/images/mock-4.png" />
-					<div class="text-container">
-						<div class="text">
+					<div className="text-container">
+						<div className="text">
 							<h1>That's it!</h1>
 							<h2>
 								Start browsing other RoomMe profiles in your area. You can
@@ -89,7 +89,7 @@ export default function Roomme() {
 				></iframe>
 			</main>
 			<footer>
-				<div class="logo">
+				<div className="logo">
 					<img alt="" src="/mockups/roomme/images/favicon-white.png" />
 					<h3>RoomMe ©2022</h3>
 					<h3>| info@roomme.com</h3>

@@ -23,6 +23,7 @@
 .sean-eddy .information h2,
 .sean-eddy .information h3,
 .sean-eddy .information ul {
+	list-style-type: none;
 	text-align: center;
 	width: 100%;
 }

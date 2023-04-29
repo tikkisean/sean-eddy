@@ -1,0 +1,55 @@
+.traffic * {
+	color: white;
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+.traffic {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	flex-direction: column;
+}
+
+.traffic canvas {
+	border-radius: 2rem;
+	box-shadow: 0.75rem 0.75rem 0.75rem rgba(0, 0, 0, 0.5);
+}
+
+.traffic footer {
+	background: black;
+	bottom: 0;
+	display: flex;
+	height: 2.5rem;
+	justify-content: right;
+	padding: 0.5rem;
+	padding-right: 0.75rem;
+	position: absolute;
+	width: 100%;
+}
+
+.traffic footer a {
+	text-decoration: underline;
+}
+
+.traffic #main-container {
+	display: flex;
+	gap: 2rem;
+	height: 100vh;
+	padding-bottom: 4.5rem;
+	padding-top: 2rem;
+	width: 50%;
+}
+
+@media all and (min-width: 481px) and (max-width: 1099px) {
+	.traffic #main-container {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.traffic #main-container {
+		flex-direction: column;
+		width: 90%;
+	}
+}

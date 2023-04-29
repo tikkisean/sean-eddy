@@ -1,0 +1,82 @@
+.search-visualizer .formatted-text-container,
+.search-visualizer .label-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	position: relative;
+}
+
+.search-visualizer code {
+	width: min-content;
+	white-space: nowrap;
+}
+
+.search-visualizer span {
+	transition: all 0.25s;
+}
+
+.search-visualizer .controls {
+	display: flex;
+	justify-content: left;
+}
+
+.search-visualizer .control-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.search-visualizer .control-container > * {
+	border-radius: 1rem;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.search-visualizer .label-container > * {
+	text-align: right;
+}
+
+.search-visualizer .search-visualizer-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.search-visualizer .string {
+	transition: left 0.25s;
+}
+
+.search-visualizer .vertical {
+	border-left: 0.1rem solid white;
+}
+
+.search-visualizer .visualizer-container {
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	padding: 1.5rem;
+}
+
+.search-visualizer > * {
+	font-size: 2rem;
+}
+
+.search-visualizer-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@media all and (max-width: 480px) {
+	.search-visualizer > * {
+		font-size: 1.25rem;
+	}
+
+	.search-visualizer .visualizer-container {
+		gap: 0.5rem;
+	}
+}

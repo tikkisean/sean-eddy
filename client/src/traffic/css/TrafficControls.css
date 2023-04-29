@@ -1,0 +1,84 @@
+.traffic-control {
+	background: black;
+	border-radius: 1rem;
+	box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	transition: all 0.25s;
+}
+
+.traffic-control hr {
+	margin-bottom: 1rem;
+}
+
+.traffic-control input {
+	width: 2rem;
+}
+
+.traffic-control select {
+	background: black;
+	border: none;
+	font-size: 1rem;
+}
+
+.traffic-control .input-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.traffic-control .input-row div {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.traffic-control .input-row svg {
+	cursor: pointer;
+	transition: all 0.25s;
+}
+
+.traffic-control .input-row-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.traffic-control .title-bar {
+	cursor: pointer;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.traffic-control .title-bar div {
+	display: flex;
+	gap: 1rem;
+}
+
+.traffic-control .title-bar svg {
+	transition: transform 0.25s;
+	width: 2rem;
+}
+
+.traffic-control:hover {
+	transform: scale(1.05) translate(0.25rem, -0.25rem);
+}
+
+.traffic-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: min-content;
+}
+
+.traffic-controls h1 {
+	font-size: 2.5rem;
+}
+
+@media all and (max-width: 480px) {
+	.traffic-controls {
+		width: 100%;
+	}
+}

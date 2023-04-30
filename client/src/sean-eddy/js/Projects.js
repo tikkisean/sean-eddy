@@ -77,6 +77,32 @@ export default function Projects() {
 					</div>
 				</div>
 				<div className="section">
+					<img alt="" src="/sean-eddy/images/string-search.png" />
+					<div className="information">
+						<h2>String Searching</h2>
+						<hr></hr>
+						<p>
+							Interactive article discussing different string-searching
+							algorithms and data structures. Learn the clever efficiencies
+							exploited by modern string-searching methods through written
+							analyses and visualizations.
+						</p>
+						<hr></hr>
+						<div className="button-container">
+							<a href="/string-search" rel="noreferrer" target="_blank">
+								<p>Read the article</p>
+							</a>
+							<a
+								href="https://github.com/tikkisean/sean-eddy/tree/main/client/src/string-search"
+								rel="noreferrer"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faGithubSquare} size={"3x"} />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className="section">
 					<div className="information">
 						<h2>Entrepreneurship Mockups</h2>
 						<hr></hr>

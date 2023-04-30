@@ -1,38 +1,52 @@
-.prefix-table {
+.string-search .table {
 	background: rgba(255, 255, 255, 0.25);
 	border-radius: 2rem;
 	box-shadow: -0.75rem 0.75rem black;
 }
 
-.prefix-table table {
+.string-search table {
 	border: 0;
 	border-radius: 2rem;
 	border-spacing: 0;
 	width: 100%;
 }
 
-.prefix-table .table-container {
+.string-search .table-container {
 	padding: 1.5rem;
 }
 
-.prefix-table table {
+.string-search table {
 	border: 0.25rem solid;
+	overflow: hidden;
 }
 
-.prefix-table td {
+.string-search td {
 	transition: background-color 0.25s;
 }
 
-.prefix-table td,
-.prefix-table th {
+.string-search td,
+.string-search th {
 	border-radius: 2rem;
 	font-size: 1.5rem;
 	padding: 0.5rem;
 }
 
+.string-search thead tr {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.string-search tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
 @media all and (max-width: 480px) {
-	.prefix-table th,
-	.prefix-table td {
+	.string-search table {
+		display: block;
+		overflow: scroll;
+	}
+
+	.string-search th,
+	.string-search td {
 		font-size: 1.25rem;
 	}
 }

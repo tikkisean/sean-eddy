@@ -23,9 +23,9 @@ export default function StringSearch() {
 							exists within a larger string. Remember, a string is just a
 							sequence of characters. For example, an application of a
 							string-searching algorithm could be to find the number of times
-							and places a specific word occurs in a book. In this analysis
-							however, we will be searching fictitious DNA sequences for
-							fictitious genes. We will consider different approaches to
+							and places a specific word occurs in a book. For much of this
+							analysis however, we will be searching fictitious DNA sequences
+							for fictitious genes. We will consider different approaches to
 							implementing such an algorithm, building incrementally in
 							complexity and runtime efficiency.
 						</p>
@@ -97,9 +97,9 @@ export default function StringSearch() {
 						<p>
 							Finally, let's consider the best case runtime of the naive
 							algorithm. Just as we use Big O notation to represent worst case
-							runtime, we use Big Omega to represent best case runtime. In the
-							best case, the gene and DNA sequence are identical, and so just{" "}
-							<i>m</i> work on the first iteration is needed to find a
+							runtime, we use Big Omega notation to represent best case runtime.
+							In the best case, the gene and DNA sequence are identical, and so
+							just <i>m</i> work on the first iteration is needed to find a
 							match&mdash;&#937;(<i>m</i>). In the next section, we'll discuss
 							how we can improve these runtimes with smarter string-searching
 							algorithms!
@@ -170,9 +170,10 @@ export default function StringSearch() {
 							we know our gene does not begin at any previous index, and so we
 							can move forward without backtracking. However, if we find a value
 							greater than zero, it is possible the current suffix is the prefix
-							of our gene, and so we continue searching for the rest of the
-							gene. Below is a more complex visualization of the KMP algorithm
-							with some non-zero values in the prefix table.
+							of our gene, and so we continue searching for the rest of the gene
+							from the end of the prefix. Below is a more complex visualization
+							of the KMP algorithm with some non-zero values in the prefix
+							table.
 						</p>
 					</div>
 					<SearchVisualizer
@@ -231,13 +232,13 @@ export default function StringSearch() {
 							at an index further to the left in the search string. Knowing this
 							information, you can conclude that any of the following alignments
 							tested in which this character in the search string is not aligned
-							with the sequence string will fail. Likewise, if you know the
-							mismatched character is not present in the search string, you can
-							realize that any future alignment which attempts to match this
-							mismatched character will fail. Together, these insights allow us
-							to skip many alignments which we know would fail, thus making the
-							algorithm more efficient. This is a tricky concept to explain, so
-							let's visualize it below.
+							with the character in the sequence string will fail. Likewise, if
+							you know the mismatched character is not present in the search
+							string, you can realize that any future alignment which attempts
+							to match this mismatched character will fail. Together, these
+							insights allow us to skip many alignments which we know would
+							fail, thus making the algorithm more efficient. This is a tricky
+							concept to understand, so let's visualize it below.
 						</p>
 					</div>
 					<SearchVisualizer
@@ -299,9 +300,9 @@ export default function StringSearch() {
 							case, each alignment mismatches on the first character examined
 							and the Bad Character Rule shifts the search string entirely
 							beyond the current index (the mismatched character was not found
-							further along in the search string). In this case, just <i>m</i>/
+							further along in the search string). In this case, just <i>m</i> /{" "}
 							<i>n</i> alignments are tested, so the algorithm is &#937;(
-							<i>m</i>/<i>n</i>). Unfortunately, Boyer-Moore has a worse worst
+							<i>m</i> / <i>n</i>). Unfortunately, Boyer-Moore has a worse worst
 							case than KMP of O(<i>m</i> * <i>n</i>). For example, when the
 							search string is very similar to the sequence string neither rule
 							can eliminate any future alignments and so all <i>m</i> alignments
@@ -318,12 +319,154 @@ export default function StringSearch() {
 					</div>
 					<hr></hr>
 					<h2>The Trie Data Structure</h2>
+					<div className="text-box">
+						<p>
+							This last string-searching method is a bit different&mdash;tries
+							are not algorithms, but rather a unique way of storing substrings
+							that makes searching very efficient. They got their name from the
+							middle syllable "trie" in re-trie-val. Instead of storing the raw
+							sequence string itself, tries are trees where all possible
+							substrings are stored character-by-character. Tries can also be
+							used to store a collection of words in place of substrings, as in
+							the example below. This trie is storing the words <code>A</code>,{" "}
+							<code>to</code>, <code>tea</code>, <code>ted</code>,{" "}
+							<code>ten</code>, <code>i</code>, <code>in</code>, and{" "}
+							<code>inn</code>. Notice how words sharing the same prefixes share
+							paths on the tree (e.g. <code>tea</code> and <code>ten</code>{" "}
+							which share the prefix <code>te</code>).
+						</p>
+					</div>
 					<img
 						alt="example of a trie data structure"
 						src="/string-search/images/Trie_example.svg"
 					/>
+					<h3>Trie Time Complexity</h3>
+					<div className="text-box">
+						<p>
+							The benefit of storing words or substrings in a trie is the
+							guaranteed fast retrieval time for an arbitrary string. Retrieval
+							is an &#937;(<i>n</i>) and O(<i>n</i>) operation, where <i>n</i>{" "}
+							is the length of the search string. While the best
+							string-searching algorithms covered above ran at worst in linear
+							time, this was proportional to the length of the sequence string,
+							not the search string. This means that in a trie like the one
+							above, the retrieval time for any existing string would not take
+							any longer if the trie were expanded to hold thousands of words.
+							This linear retrieval time works because the trie only needs to be
+							traversed as deep as the length of the search string. For example,
+							when searching for the word <code>in</code> in the trie above,
+							just two children have to be examined (<code>i</code> and{" "}
+							<code>in</code>) to determine that the word is in the trie. This
+							is despite the fact that another longer word (<code>inn</code>)
+							shares a prefix with <code>in</code>. There could be even longer
+							words sharing this prefix further down the trie like{" "}
+							<code>innovate</code> but their inclusion would not affect the
+							retrieval time of any shorter words higher up the trie.
+						</p>
+					</div>
+					<div className="text-box">
+						<p>
+							Like any data structure, tries have tradeoffs in their
+							performance. While tries support fast retrieval, the initial
+							creation of the data structure is an expensive operation. The
+							preprocessing time of a trie is proportional to the number of
+							strings stored multiplied by the average length of a string. For
+							each word to be inserted, you must traverse character-by-character
+							through the trie just as you do when retrieving. Additionally,
+							tries can become very large when populated with many items and so
+							can be space-intensive.
+						</p>
+					</div>
+					<hr></hr>
+					<h2>Summary</h2>
+					<div className="table">
+						<div className="table-container">
+							<table>
+								<thead>
+									<tr>
+										<th>Algorithm</th>
+										<th>Preprocessing</th>
+										<th>Best-case</th>
+										<th>Worst-case</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Naive</th>
+										<td></td>
+										<td>
+											&#937;(<i>m</i>)
+										</td>
+										<td>
+											O(<i>m</i> * <i>n</i>)
+										</td>
+									</tr>
+									<tr>
+										<th>KMP</th>
+										<td>
+											O(<i>m</i>)
+										</td>
+										<td>
+											&#937;(<i>m</i>)
+										</td>
+										<td>
+											O(<i>m</i>)
+										</td>
+									</tr>
+									<tr>
+										<th>Boyer-Moore</th>
+										<td>
+											O(<i>m</i>)
+										</td>
+										<td>
+											&#937;(<i>m</i> / <i>n</i>)
+										</td>
+										<td>
+											O(<i>m</i> * <i>n</i>)
+										</td>
+									</tr>
+									<tr>
+										<th>Trie</th>
+										<td>
+											O(<i>n</i>) (per string)
+										</td>
+										<td>
+											&#937;(<i>n</i>)
+										</td>
+										<td>
+											O(<i>n</i>)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div className="text-box">
+						<p>
+							In this article, we covered a variety of string-searching
+							algorithms and data structures. Each method has its strengths and
+							weaknesses and may be best for a given application. The naive
+							algorithm is easy to understand and implement, but can be slow
+							when searching large strings with many similar characters. The KMP
+							algorithm guarantees a linear search time, but does not perform as
+							well as some other algorithms in their best cases. The Boyer-Moore
+							algorithm is very efficient when searching dissimlar strings, but
+							has the same weakness as the naive algorithm in the worst case.
+							And finally, while the trie data structure is the fastest at
+							retrieving strings, it is expensive to construct and
+							space-intensive.
+						</p>
+					</div>
 				</main>
 			</div>
+			<footer>
+				<h3>
+					Site by{" "}
+					<a href="/" rel="noopener noreferrer" target="_blank">
+						Sean Eddy
+					</a>
+				</h3>
+			</footer>
 		</div>
 	);
 }

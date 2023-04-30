@@ -13,10 +13,22 @@
 	padding: 0 0.4rem;
 }
 
-.string-search .search-visualizer span,
-.string-search .text-box code {
-	color: black;
-	font-family: Monospace !important;
+.string-search footer {
+	background: black;
+	display: flex;
+	height: 2.5rem;
+	justify-content: right;
+	padding: 0.5rem;
+	padding-right: 0.75rem;
+	width: 100%;
+}
+
+.string-search footer a {
+	text-decoration: underline;
+}
+
+.string-search footer h3 {
+	font-size: 1.25rem;
 }
 
 .string-search h1 {
@@ -27,16 +39,22 @@
 	font-size: 2.5rem;
 }
 
-.string-search p {
-	font-size: 2rem;
-}
-
 .string-search h3 {
 	font-size: 2rem;
 }
 
 .string-search img {
 	width: 30rem !important;
+}
+
+.string-search p {
+	font-size: 2rem;
+}
+
+.string-search .search-visualizer span,
+.string-search .text-box code {
+	color: black;
+	font-family: Monospace !important;
 }
 
 .string-search .text-box p {

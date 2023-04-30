@@ -12,7 +12,7 @@ export default function StringSearch() {
 				<main id="main-container">
 					<div>
 						<h1>String-Searching Algorithms</h1>
-						<h3>visualizations & analyses</h3>
+						<h3>analyses & visualizations</h3>
 					</div>
 					<hr></hr>
 					<h2>Introduction</h2>

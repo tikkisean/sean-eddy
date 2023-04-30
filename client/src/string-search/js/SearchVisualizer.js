@@ -207,7 +207,7 @@ export default function SearchVisualizer({
 						${
 							!match &&
 							index > 0 &&
-							`#search-visualizer-container-${id} .prefix-table [class="string-${
+							`#search-visualizer-container-${id} #prefix-table [class="string-${
 								index - 1
 							}"] {
 								background-color: red;

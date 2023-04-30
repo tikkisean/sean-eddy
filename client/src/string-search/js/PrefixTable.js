@@ -3,7 +3,7 @@ import "../css/PrefixTable.css";
 
 export default function PrefixTable({ prefixTable, string }) {
 	return (
-		<div className="table">
+		<div className="table" id="prefix-table">
 			<div className="table-container">
 				<table>
 					<thead>

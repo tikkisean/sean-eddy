@@ -10,7 +10,7 @@ export default function Academics() {
 					<div className="information">
 						<h2>University of Arizona</h2>
 						<h3>2021 - Present</h3>
-						<h3>GPA: 3.88 (updated Fall 2022)</h3>
+						<h3>GPA: 3.91 (updated Spring 2023)</h3>
 						<hr></hr>
 						<ul>
 							<li>M.S. Computer Science - Spring 2025</li>

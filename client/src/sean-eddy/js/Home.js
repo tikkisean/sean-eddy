@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div className="home">
 			<div id="landing">
-				<img alt="" id="headshot" src="/sean-eddy/images/headshot.jpg" />
+				<img alt="" id="headshot" src="/sean-eddy/images/headshot.png" />
 				<div id="text">
 					<h1>Hey! My name is Sean.</h1>
 				</div>

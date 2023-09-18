@@ -31,8 +31,8 @@ export default function Home() {
 						</div>
 					</div>
 					<p>
-						I am currently a sophomore at the University of Arizona pursuing a
-						B.S. and ultimately an M.S. in Computer Science with a minor in
+						I am currently a senior at the University of Arizona pursuing a B.S.
+						and ultimately an M.S. in Computer Science with a minor in
 						Entrepreneurship and Innovation. When I'm not coding, I'm out
 						exploring the Sonoran Desert on my bike, finding my new favorite
 						Mexican restaurant, or designing Lego models.

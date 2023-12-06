@@ -53,36 +53,34 @@ export default function Traffic() {
 		const medWidth = paintWidth * 3;
 		const xWidth =
 			medWidth +
-			opts.x.leftTurns * 2 * laneWidth +
-			opts.x.leftTurns * 2 * paintWidth +
+			opts.x.leftTurns * laneWidth +
+			opts.x.leftTurns * paintWidth +
 			opts.x.numLanes * laneWidth +
 			(opts.x.numLanes - 2) * paintWidth +
-			(opts.x.bike ? paintWidth * 2 + bikeWidth * 2 : 0) +
-			opts.x.rightTurns * 2 * laneWidth +
-			opts.x.rightTurns * 2 * paintWidth;
+			(opts.x.bike ? paintWidth * 2 + bikeWidth * 2 : 0);
 		const yWidth =
 			medWidth +
-			opts.y.leftTurns * 2 * laneWidth +
-			opts.y.leftTurns * 2 * paintWidth +
+			opts.y.leftTurns * laneWidth +
+			opts.y.leftTurns * paintWidth +
 			opts.y.numLanes * laneWidth +
 			(opts.y.numLanes - 2) * paintWidth +
-			(opts.y.bike ? paintWidth * 2 + bikeWidth * 2 : 0) +
-			opts.y.rightTurns * 2 * laneWidth +
-			opts.y.rightTurns * 2 * paintWidth;
+			(opts.y.bike ? paintWidth * 2 + bikeWidth * 2 : 0);
+		const xLWidth = medWidth + opts.x.leftTurns * (laneWidth + paintWidth);
+		const yLWidth = medWidth + opts.y.leftTurns * (laneWidth + paintWidth);
+		const xRWidth = opts.x.rightTurns * (laneWidth + paintWidth);
+		const yRWidth = opts.y.rightTurns * (laneWidth + paintWidth);
 		const xStop =
-			xMid +
 			yWidth / 2 +
+			yRWidth +
 			laneWidth +
 			(opts.crosswalks ? (3 / 8) * laneWidth : 0) +
-			paintWidth * 2 -
-			xMid;
+			paintWidth * 2;
 		const yStop =
-			yMid +
 			xWidth / 2 +
+			xRWidth +
 			laneWidth +
 			(opts.crosswalks ? (3 / 8) * laneWidth : 0) +
-			paintWidth * 2 -
-			yMid;
+			paintWidth * 2;
 
 		// draw grass
 		c.fillStyle = "darkgreen";
@@ -90,39 +88,46 @@ export default function Traffic() {
 
 		// draw roads
 		c.fillStyle = "black";
-		c.fillRect(0, yMid - xWidth / 2, width, xWidth);
-		c.fillRect(xMid - yWidth / 2, 0, yWidth, height);
+		c.fillRect(xMid - yWidth / 2 - yRWidth, 0, yWidth + yRWidth, yMid);
+		c.fillRect(xMid, yMid - xWidth / 2 - xRWidth, xMid, xWidth + xRWidth);
+		c.fillRect(xMid - yWidth / 2, yMid, yWidth + yRWidth, yMid);
+		c.fillRect(0, yMid - xWidth / 2, xMid, xWidth + xRWidth);
 
 		// draw crosswalks
 		if (opts.crosswalks) {
 			c.fillStyle = "white";
 			c.fillRect(
-				xMid - yWidth / 2 - laneWidth,
-				yMid - xWidth / 2 - laneWidth,
-				yWidth + laneWidth * 2,
-				xWidth + laneWidth * 2
+				xMid - yWidth / 2 - yRWidth - laneWidth,
+				yMid - xWidth / 2 - xRWidth - laneWidth,
+				yWidth + (yRWidth + laneWidth) * 2,
+				xWidth + (xRWidth + laneWidth) * 2
 			);
 			c.fillStyle = "black";
 			c.fillRect(
-				xMid - yWidth / 2 - laneWidth + paintWidth,
-				yMid - xWidth / 2 - laneWidth + paintWidth,
-				yWidth + (laneWidth - paintWidth) * 2,
-				xWidth + (laneWidth - paintWidth) * 2
+				xMid - yWidth / 2 - yRWidth - laneWidth + paintWidth,
+				yMid - xWidth / 2 - xRWidth - laneWidth + paintWidth,
+				yWidth + (yRWidth + laneWidth - paintWidth) * 2,
+				xWidth + (xRWidth + laneWidth - paintWidth) * 2
 			);
 			c.fillStyle = "white";
 			c.fillRect(
-				xMid - yWidth / 2 - paintWidth,
-				yMid - xWidth / 2 - paintWidth,
-				yWidth + paintWidth * 2,
-				xWidth + paintWidth * 2
+				xMid - yWidth / 2 - yRWidth - paintWidth,
+				yMid - xWidth / 2 - xRWidth - paintWidth,
+				yWidth + (yRWidth + paintWidth) * 2,
+				xWidth + (xRWidth + paintWidth) * 2
 			);
 			c.fillStyle = "black";
-			c.fillRect(xMid - yWidth / 2, yMid - xWidth / 2, yWidth, xWidth);
+			c.fillRect(
+				xMid - yWidth / 2 - yRWidth,
+				yMid - xWidth / 2 - xRWidth,
+				yWidth + yRWidth * 2,
+				xWidth + xRWidth * 2
+			);
 		} else {
 			c.fillStyle = "black";
 			c.fillRect(
-				xMid - yWidth / 2 - laneWidth,
-				yMid - xWidth / 2 - laneWidth,
+				xMid - yWidth / 2 - xRWidth - laneWidth,
+				yMid - xWidth / 2 - yRWidth - laneWidth,
 				yWidth + laneWidth * 2,
 				xWidth + laneWidth * 2
 			);
@@ -131,31 +136,32 @@ export default function Traffic() {
 		// draw stop lines
 		c.fillStyle = "white";
 		c.fillRect(
-			xMid - yWidth / 2,
+			xMid - yWidth / 2 - yRWidth,
 			yMid - yStop,
-			yWidth / 2 - medWidth / 2,
+			yWidth / 2 - yLWidth / 2 + yRWidth,
 			paintWidth * 2
 		);
 		c.fillRect(
 			xMid + xStop - paintWidth * 2,
-			yMid - xWidth / 2,
+			yMid - xWidth / 2 - xRWidth,
 			paintWidth * 2,
-			xWidth / 2 - medWidth / 2
+			xWidth / 2 - xLWidth / 2 + xRWidth
 		);
 		c.fillRect(
-			xMid + medWidth / 2,
+			xMid + yLWidth / 2,
 			yMid + yStop - paintWidth * 2,
-			yWidth / 2 - medWidth / 2,
+			yWidth / 2 - yLWidth / 2 + yRWidth,
 			paintWidth * 2
 		);
 		c.fillRect(
 			xMid - xStop,
-			yMid + medWidth / 2,
+			yMid + xLWidth / 2,
 			paintWidth * 2,
-			xWidth / 2 - medWidth / 2
+			xWidth / 2 - xLWidth / 2 + xRWidth
 		);
 
 		// draw left turn lanes
+		/*
 		c.fillStyle = "white";
 		for (
 			let x = xMid - medWidth / 2 - laneWidth - paintWidth;
@@ -168,24 +174,23 @@ export default function Traffic() {
 		) {
 			c.fillRect(x, 0, paintWidth, yMid - yStop);
 		}
+		*/
 
 		// draw lane markings
 		c.fillStyle = "white";
 		for (
-			let y = yMid - xWidth / 2 - laneWidth - paintGap - paintHeight;
+			let y = yMid - xWidth / 2 - xRWidth - laneWidth - paintGap - paintHeight;
 			y + paintHeight > 0;
 			y -= paintHeight + paintGap
 		) {
 			for (
-				let x =
-					xMid -
-					medWidth / 2 -
-					(laneWidth + paintWidth) * (opts.y.leftTurns + 1);
+				let x = xMid - xLWidth / 2;
 				x > xMid - yWidth / 2 + bikeWidth + paintWidth;
 				x -= paintWidth + laneWidth
 			) {
 				c.fillRect(x, y, paintWidth, paintHeight);
 			}
+			continue;
 			for (
 				let x = xMid + medWidth / 2 + laneWidth;
 				x < xMid + yWidth / 2;
@@ -194,6 +199,8 @@ export default function Traffic() {
 				c.fillRect(x, y, paintWidth, paintHeight);
 			}
 		}
+
+		return;
 
 		for (
 			let x = xMid + yWidth / 2 + laneWidth + paintGap;

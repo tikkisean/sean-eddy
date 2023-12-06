@@ -1,0 +1,132 @@
+.dp-and-net-flow * {
+	color: white;
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+.dp-and-net-flow code {
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 0.25rem;
+	color: black;
+	display: inline-block;
+	letter-spacing: 0.1ch;
+	padding: 0 0.4rem;
+}
+
+.dp-and-net-flow footer {
+	background: black;
+	display: flex;
+	height: 2.5rem;
+	justify-content: right;
+	padding: 0.5rem;
+	padding-right: 0.75rem;
+	width: 100%;
+}
+
+.dp-and-net-flow footer a {
+	text-decoration: underline;
+}
+
+.dp-and-net-flow footer h3 {
+	font-size: 1.25rem;
+}
+
+.dp-and-net-flow h1 {
+	font-size: 3rem;
+}
+
+.dp-and-net-flow h2 {
+	font-size: 2.5rem;
+}
+
+.dp-and-net-flow h3 {
+	font-size: 2rem;
+}
+
+.dp-and-net-flow img {
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+	width: 30rem !important;
+}
+
+.dp-and-net-flow p {
+	font-size: 2rem;
+}
+
+.dp-and-net-flow .text-box p {
+	font-size: 1.5rem;
+}
+
+.dp-and-net-flow .search-visualizer span,
+.dp-and-net-flow .text-box code {
+	color: black;
+	font-family: Monospace !important;
+}
+
+.dp-and-net-flow .text-box p,
+.dp-and-net-flow #graph-max-flow-viz-container {
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+	padding: 1.5rem;
+}
+
+.dp-and-net-flow #background {
+	background: rgb(0, 150, 255);
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.dp-and-net-flow #graph-max-flow-viz-container > div:first-child {
+	align-items: center;
+	display: flex;
+	justify-content: right;
+}
+
+.dp-and-net-flow #graph-max-flow-viz-container > div:first-child svg {
+	background-color: green;
+	border-radius: 1rem;
+	box-shadow: -0.25rem 0.25rem black;
+	cursor: pointer;
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+.dp-and-net-flow #main-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	height: 100%;
+	padding: 2rem 0;
+	width: 50%;
+}
+
+.dp-and-net-flow #main-container > * {
+	width: 100%;
+}
+
+@media all and (min-width: 481px) and (max-width: 1099px) {
+	.dp-and-net-flow #main-container {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.dp-and-net-flow img {
+		width: 100% !important;
+	}
+
+	.dp-and-net-flow nobr {
+		font-size: 1rem;
+	}
+
+	.dp-and-net-flow .text-box p {
+		font-size: 1.25rem;
+	}
+
+	.dp-and-net-flow #main-container {
+		width: 90%;
+	}
+}

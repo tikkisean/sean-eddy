@@ -1,0 +1,77 @@
+.dp-and-net-flow .table {
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+}
+
+.dp-and-net-flow table {
+	border: 0;
+	border-radius: 1rem;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.dp-and-net-flow .table-container {
+	padding: 1.5rem;
+}
+
+.dp-and-net-flow .table-container > div:first-child {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+}
+
+.dp-and-net-flow .table-container > div:first-child span {
+	font-size: 2rem;
+}
+
+.dp-and-net-flow .table-container > div:first-child svg {
+	background-color: green;
+	border-radius: 1rem;
+	box-shadow: -0.25rem 0.25rem black;
+	cursor: pointer;
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+.dp-and-net-flow table {
+	border: 0.25rem solid;
+	overflow: hidden;
+}
+
+.dp-and-net-flow td {
+	transition: background-color 0.25s;
+}
+
+.dp-and-net-flow td,
+.dp-and-net-flow th {
+	font-size: 1rem;
+	padding: 0.25rem;
+}
+
+.dp-and-net-flow thead tr {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dp-and-net-flow td:nth-child(even),
+.dp-and-net-flow th:nth-child(even),
+.dp-and-net-flow tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media all and (max-width: 480px) {
+	.dp-and-net-flow table {
+		display: block;
+		overflow: scroll;
+	}
+
+	.dp-and-net-flow th,
+	.dp-and-net-flow td {
+		font-size: 0.75rem;
+	}
+
+	.dp-and-net-flow .table-container > div:first-child span {
+		font-size: 1rem;
+	}
+}

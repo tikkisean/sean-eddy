@@ -1,0 +1,126 @@
+.lang-compare a,
+.lang-compare h1,
+.lang-compare h2,
+.lang-compare h3,
+.lang-compare hr,
+.lang-compare p {
+	color: white;
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+.lang-compare footer {
+	background: black;
+	display: flex;
+	height: 2.5rem;
+	justify-content: right;
+	padding: 0.5rem;
+	padding-right: 0.75rem;
+	width: 100%;
+}
+
+.lang-compare footer a {
+	text-decoration: underline;
+}
+
+.lang-compare footer h3 {
+	font-size: 1.25rem;
+}
+
+.lang-compare h1 {
+	font-size: 3rem;
+}
+
+.lang-compare h2 {
+	font-size: 2.5rem;
+}
+
+.lang-compare h3 {
+	font-size: 2rem;
+}
+
+.lang-compare main > img {
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+	width: 30rem !important;
+}
+
+.lang-compare p {
+	font-size: 1.5rem;
+}
+
+.lang-compare p,
+.lang-compare .prettyprint {
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 2rem;
+	box-shadow: -0.75rem 0.75rem black;
+	padding: 1.5rem;
+}
+
+.lang-compare pre {
+	border: none;
+	font-size: 1rem;
+	width: min-content !important;
+}
+
+.lang-compare .prettyprint {
+	max-width: 100%;
+	overflow: scroll;
+	text-align: start;
+}
+
+.lang-compare #background {
+	background: rgb(0, 150, 255);
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.lang-compare #main-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	height: 100%;
+	padding: 2rem 0;
+	width: 50%;
+}
+
+.lang-compare #main-container > * {
+	width: 100%;
+}
+
+.lang-title {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.lang-title img {
+	width: 5rem;
+}
+
+@media all and (min-width: 481px) and (max-width: 1099px) {
+	.lang-compare #main-container {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.lang-compare main > img {
+		width: 100% !important;
+	}
+
+	.lang-compare p {
+		font-size: 1.25rem;
+	}
+
+	.lang-compare .prettyprint {
+		font-size: 0.8rem;
+	}
+
+	.lang-compare #main-container {
+		width: 90%;
+	}
+}

@@ -27,7 +27,7 @@ export default function Navbar() {
 					</div>
 					<div id="icons">
 						<a
-							href="https://www.linkedin.com/in/sean-eddy-6326051ba"
+							href="https://www.linkedin.com/in/tikkisean"
 							rel="noreferrer"
 							target="_blank"
 						>

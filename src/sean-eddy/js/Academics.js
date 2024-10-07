@@ -10,12 +10,11 @@ export default function Academics() {
 					<div className="information">
 						<h2>University of Arizona</h2>
 						<h3>2021 - Present</h3>
-						<h3>GPA: 3.91 (updated Spring 2023)</h3>
+						<h3>GPA: 3.90 (updated Spring 2024)</h3>
 						<hr></hr>
 						<ul>
 							<li>M.S. Computer Science - Spring 2025</li>
 							<li>B.S. Computer Science - Spring 2024</li>
-							<li>Minor Entrepreneurship and Innovation - Spring 2024</li>
 						</ul>
 						<hr></hr>
 						<ul>
@@ -49,7 +48,7 @@ export default function Academics() {
 						</ul>
 						<hr></hr>
 						<ul>
-							<li>13 AP classes taken and passed</li>
+							<li>Valley Honors Award</li>
 							<li>AP Scholar with Distinction</li>
 						</ul>
 					</div>

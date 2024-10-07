@@ -149,7 +149,7 @@ export default function SearchVisualizer({
 			) {
 				if (tmpStringIndex < 0) {
 					continue;
-				} else if (string[tmpStringIndex] != seq[seqIndex]) {
+				} else if (string[tmpStringIndex] !== seq[seqIndex]) {
 					break;
 				} else if (seqIndex === seq.length - 1) {
 					return index - stringIndex + 1;

@@ -14,10 +14,9 @@ export default function Projects() {
 						<h2>RailForLess.us</h2>
 						<hr></hr>
 						<p>
-							Amtrak scraping service that finds the cheapest fares over a given
-							period. Requests open a Chrome browser on a remote server where
-							data is carefully scraped without detection through rotating
-							proxies. Application uses a React front-end and Python back-end.
+							Amtrak scraping service that finds the cheapest fares with
+							flexible dates. Inspired by Google Flights, RailForLess helps
+							hundreds of Amtrak travelers plan their trips everyday.
 						</p>
 						<hr></hr>
 						<div className="button-container">
@@ -57,9 +56,9 @@ export default function Projects() {
 						</h2>
 						<hr></hr>
 						<p>
-							A multi-year project meticulously recreating Downtown Des Moines
-							in Minecraft. Featured on multiple news outlets and the recipient
-							of the WDMSSF Outstanding Honors Project Award.
+							A multi-year project meticulously recreating Downtown Des Moines,
+							IA in Minecraft. Featured on several news outlets and the
+							recipient of the WDMSSF Outstanding Honors Project Award.
 						</p>
 						<hr></hr>
 						<div className="button-container">

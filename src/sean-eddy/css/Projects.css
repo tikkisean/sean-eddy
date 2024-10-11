@@ -17,6 +17,22 @@
 	transition: box-shadow 0.25s;
 }
 
+.projects .multi-item-container {
+	display: flex;
+	gap: 1rem;
+}
+
+.projects .multi-item-container div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.projects .multi-item-container img {
+	width: 100% !important;
+	transition: box-shadow 0.25s;
+}
+
 .projects #illustrations {
 	display: flex;
 	height: 100%;
@@ -26,33 +42,17 @@
 	transition: width 0.5s;
 }
 
-.projects #mockups-container {
-	display: flex;
-	gap: 1rem;
-}
-
-.projects #mockups-container div {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.projects #mockups-container img {
-	width: 100%;
-	transition: box-shadow 0.25s;
-}
-
 @media (hover: hover) {
 	.projects .button-container p:hover {
 		box-shadow: 0 0 0.5rem white;
 	}
 
-	.projects #illustrations img:hover {
-		width: 100%;
+	.projects .multi-item-container img:hover {
+		box-shadow: 0 0 0.75rem white;
 	}
 
-	.projects #mockups-container img:hover {
-		box-shadow: 0 0 0.75rem white;
+	.projects #illustrations img:hover {
+		width: 100%;
 	}
 }
 
@@ -62,13 +62,13 @@
 		gap: 1rem;
 	}
 
+	.projects .multi-item-container {
+		flex-direction: column;
+	}
+
 	.projects #illustrations {
 		flex-direction: column;
 		height: auto;
 		gap: 1rem;
-	}
-
-	.projects #mockups-container {
-		flex-direction: column;
 	}
 }

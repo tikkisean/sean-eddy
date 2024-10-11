@@ -41,6 +41,28 @@ export default function Projects() {
 					</div>
 				</div>
 				<div className="section">
+					<img alt="" src="/sean-eddy/images/algotrader.png" />
+					<div className="information">
+						<h2>Algotrader</h2>
+						<hr></hr>
+						<p>
+							I have spent years studying and evaluating speculative trading
+							strategies in the E-mini S&P 500 futures market. Read my latest
+							research below.
+						</p>
+						<hr></hr>
+						<div className="button-container">
+							<a
+								href="https://hdl.handle.net/10150/672852"
+								rel="noreferrer"
+								target="_blank"
+							>
+								<p>Read the paper</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className="section">
 					<iframe
 						width="50%"
 						height="100%"
@@ -76,36 +98,54 @@ export default function Projects() {
 					</div>
 				</div>
 				<div className="section">
-					<img alt="" src="/sean-eddy/images/string-search.png" />
 					<div className="information">
-						<h2>String Searching</h2>
+						<h2>Computer Science Articles</h2>
+						<hr></hr>
+						<div className="multi-item-container">
+							<div>
+								<h3>String Searching</h3>
+								<a
+									href="/articles/string-search"
+									rel="noreferrer"
+									target="_blank"
+								>
+									<img alt="" src="/sean-eddy/images/string-search.png" />
+								</a>
+							</div>
+							<div>
+								<h3>DP and Network Flow</h3>
+								<a
+									href="/articles/dp-and-net-flow"
+									rel="noreferrer"
+									target="_blank"
+								>
+									<img alt="" src="/sean-eddy/images/dp-and-net-flow.png" />
+								</a>
+							</div>
+							<div>
+								<h3>Language Comparison</h3>
+								<a
+									href="/articles/lang-compare"
+									rel="noreferrer"
+									target="_blank"
+								>
+									<img alt="" src="/sean-eddy/images/lang-compare.png" />
+								</a>
+							</div>
+						</div>
 						<hr></hr>
 						<p>
-							Interactive article discussing different string-searching
-							algorithms and data structures. Learn the clever efficiencies
-							exploited by modern string-searching methods through written
-							analyses and visualizations.
+							A series of articles I have written covering various computer
+							science topics, featuring interactive visualizations of algorithms
+							and their time complexities.
 						</p>
-						<hr></hr>
-						<div className="button-container">
-							<a href="/string-search" rel="noreferrer" target="_blank">
-								<p>Read the article</p>
-							</a>
-							<a
-								href="https://github.com/tikkisean/sean-eddy/tree/main/client/src/string-search"
-								rel="noreferrer"
-								target="_blank"
-							>
-								<FontAwesomeIcon icon={faGithubSquare} size={"3x"} />
-							</a>
-						</div>
 					</div>
 				</div>
 				<div className="section">
 					<div className="information">
 						<h2>Entrepreneurship Mockups</h2>
 						<hr></hr>
-						<div id="mockups-container">
+						<div className="multi-item-container">
 							<div>
 								<h3>RoomMe</h3>
 								<a href="/mockups/roomme" rel="noreferrer" target="_blank">
